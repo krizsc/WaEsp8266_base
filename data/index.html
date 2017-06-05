@@ -1,6 +1,14 @@
 <html>
 <head>
 	<title>Esp8266 test</title>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		function toggle(){
+			$.post("/toggle", function(data){
+				console.log(data);
+			});
+		}
+	</script>
 </head>
 <body>
 	<h1>This is a title</h1>
@@ -11,5 +19,6 @@
 		<li>option 3</li>
 	</ul>
 	<img src="img/test.jpg"/>
+	<a onclick="toggle()" href="#">Increment</a>
 </body>
 </html>
